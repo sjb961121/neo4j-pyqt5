@@ -195,6 +195,10 @@ class search_return():
 				links.append(dic)
 				links_set.add(link.identity)
 
+		print(str(self.node().labels))
+		if (str(self.node().labels)==':TS' or str(self.node().labels)==':TL'):
+			nodes=[]
+			links=[]
 
 		a = json.dumps({"nodes" : nodes,"links" : links})
 		return a
